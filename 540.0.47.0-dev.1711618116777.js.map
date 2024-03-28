@@ -1,0 +1,1 @@
+{"version":3,"file":"540.0.47.0-dev.1711618116777.js","mappings":"mRAAA,gJ","sources":["webpack:///../../libs/remix-ws-templates/src/script-templates/sindri/.sindriignore"],"sourcesContent":["export default \"# Files to exclude from Sindri circuit uploads (uses `.gitignore` syntax).\\n/.deps/\\n/scripts/\\n/templates/\\n\";"],"names":[],"sourceRoot":""}
