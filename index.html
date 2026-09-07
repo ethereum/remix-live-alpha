@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html lang="en" class="overflow-hidden">
+
+<head><base href="/">
+	<meta charset="utf-8">
+	<!--
+		The MIT License (MIT)
+		Copyright (c) 2014, 2015, the individual contributors
+		Permission is hereby granted, free of charge, to any person obtaining a copy
+		of this software and associated documentation files (the "Software"), to deal
+		in the Software without restriction, including without limitation the rights
+		to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+		copies of the Software, and to permit persons to whom the Software is
+		furnished to do so, subject to the following conditions:
+		The above copyright notice and this permission notice shall be included in
+		all copies or substantial portions of the Software.
+		THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+		IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+		FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+		AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+		LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+		OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+		THE SOFTWARE.
+		-->
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+	<!-- SEO Meta Tags -->
+	<title>Remix IDE - Smart Contract Development</title>
+	<meta name="description" content="Remix IDE - Powerful web-based IDE for smart contract development, testing, and deployment. Build, debug, and deploy Solidity contracts with ease.">
+	<meta name="keywords" content="ethereum, solidity, smart contracts, blockchain, remix, ide, development, web3, dapp, testing, deployment">
+	<meta name="author" content="Remix Project">
+	<meta name="robots" content="index, follow">
+
+	<!-- Canonical URL -->
+	<link rel="canonical" href="https://remix.ethereum.org/">
+
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://remix.ethereum.org/">
+	<meta property="og:title" content="Remix IDE - Smart Contract Development">
+	<meta property="og:description" content="Powerful web-based IDE for smart contract development, testing, and deployment. Build, debug, and deploy Solidity contracts with ease.">
+	<meta property="og:image" content="https://remix.ethereum.org/assets/img/remix-logo-blue.png">
+	<meta property="og:site_name" content="Remix IDE">
+
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:url" content="https://remix.ethereum.org/">
+	<meta property="twitter:title" content="Remix IDE - Smart Contract Development">
+	<meta property="twitter:description" content="Build, test, and deploy Solidity smart contracts with the most popular Web3 IDE">
+	<meta property="twitter:image" content="https://remix.ethereum.org/assets/img/remix-logo-blue.png">
+
+	<!-- JSON-LD Structured Data -->
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "SoftwareApplication",
+		"name": "Remix IDE",
+		"description": "Powerful web-based IDE for smart contract development, testing, and deployment",
+		"url": "https://remix.ethereum.org/",
+		"applicationCategory": "DeveloperApplication",
+		"operatingSystem": "Web Browser",
+		"creator": {
+			"@type": "Organization",
+			"name": "Remix Labs",
+			"url": "https://remix.live/"
+		},
+		"keywords": ["ethereum", "solidity", "smart contracts", "blockchain", "web3", "ide"],
+		"image": "https://remix.ethereum.org/assets/img/remix-logo-blue.png"
+	}
+	</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/pygment_trac.css">
+	<link rel="icon" type="image/x-icon" href="assets/img/remix-logo-blue.png">
+	<link rel="stylesheet" href="assets/css/intro.js/4.1.0/introjs.min.css">
+	<link rel="stylesheet" href="assets/fontawesome/css/all.css">
+	<script src="assets/js/browserfs.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+	<!-- Decide splash theme & inject theme CSS ASAP; update Desktop label/OS -->
+	<script src="assets/js/pre-splash.js"></script>
+
+	<!-- Inline minimal splash styles for earliest paint -->
+	<style>
+		/* Pre-splash shown before JS bundles load */
+		#pre-splash {
+			position: fixed;
+			inset: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			/* Use theme variable with safe fallback */
+			background: var(--bs-body-bg, #222336);
+			z-index: 9999;
+		}
+		#pre-splash .inner {
+			text-align: center;
+			/* Match body color */
+			color: var(--bs-body-color, #cfd6e4);
+			font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Arial, sans-serif;
+		}
+		#pre-splash .title {
+			margin-top: 12px;
+			font-size: 18px;
+			letter-spacing: 0.06em;
+			/* Emphasis color when available */
+			color: var(--bs-emphasis-color, #e6ecf8);
+		}
+		#pre-splash .sub {
+			margin-top: 4px;
+			font-size: 13px;
+			/* Secondary tone */
+			color: var(--bs-secondary-color, #9aa7bd);
+		}
+		#pre-splash .spinner {
+			margin-top: 16px;
+			width: 24px;
+			height: 24px;
+			/* Border matches theme (translucent), top uses primary color fallback */
+			border: 3px solid var(--bs-border-color-translucent, rgba(255,255,255,0.15));
+			border-top-color: var(--bs-primary, #3b82f6);
+			border-radius: 50%;
+			animation: pre-splash-spin 1s linear infinite;
+			display: inline-block;
+		}
+		@keyframes pre-splash-spin { to { transform: rotate(360deg); } }
+	</style>
+</head>
+
+<body>
+
+	<!-- Minimal splash screen to show instantly before React mounts -->
+	<div id="pre-splash" aria-hidden="true">
+		<div class="inner">
+			<img src="assets/img/remix-logo-blue.png" alt="Remix logo" width="64" height="64" />
+			<div id="pre-splash-title" class="title">REMIX IDE</div>
+			<div id="pre-splash-sub" class="sub">Loading…</div>
+			<div class="spinner" role="progressbar" aria-label="Loading"></div>
+		</div>
+	</div>
+
+	<!-- Electron/OS and theme work done in pre-splash.js -->
+	<div id="root"></div>
+	<!-- <script type="text/javascript" src="assets/js/loader.js"></script> -->
+	<script type="text/javascript" src="assets/js/intro.min.js"></script>
+	<script type="text/javascript" src="assets/js/parser/antlr.js"></script>
+	<!-- Paddle.js for billing/checkout -->
+	<script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
+	<!-- Tally.so feedback popup widget -->
+	<script src="https://tally.so/widgets/embed.js"></script>
+<script src="runtime.f0e23d7663cc724e.js" type="module"></script><script src="polyfills.d744d6545b7d9a9f.js" type="module"></script><script src="main.8c5bcdc11f498a56.js" type="module"></script></body>
+
+</html>
